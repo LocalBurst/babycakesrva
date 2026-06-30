@@ -1,0 +1,8 @@
+.DS_Store
+Thumbs.db
+
+# Private business documentation — do not publish
+CLAUDE.md
+DECISIONS.md
+STATUS.md
+ONLINE_ORDER_HANDOFF.md
