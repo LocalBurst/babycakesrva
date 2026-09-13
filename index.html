@@ -234,13 +234,13 @@ html.has-announce .hero { padding-top: 200px; }
 
 <!-- NAV -->
 <nav class="nav" id="nav">
-  <a class="announce-bar" id="announce-bar" href="https://forms.gle/JKewDQW8WTkSzxNh6" target="_blank" rel="noopener">
-    🎓 <strong>Next Campus Drop: Sat, Oct 3.</strong> <span class="announce-detail">Cupcakes delivered to your student in Blacksburg. </span>Join the list <span class="announce-arrow">&rarr;</span>
+  <a class="announce-bar" id="announce-bar" href="/campus/">
+    🎓 <strong>Campus Drop pre-orders are open.</strong> <span class="announce-detail">Blacksburg Sat 10/3, Richmond Sun 10/25. </span>Order now <span class="announce-arrow">&rarr;</span>
   </a>
   <script>
   (function(){
     var bar = document.getElementById('announce-bar');
-    if (new Date() >= new Date('2026-10-04T00:00:00-04:00')) {
+    if (new Date() >= new Date('2026-10-26T00:00:00-04:00')) {
       bar.parentNode.removeChild(bar);
     } else {
       document.documentElement.classList.add('has-announce');
@@ -333,6 +333,34 @@ html.has-announce .hero { padding-top: 200px; }
       </div>
     </div>
 
+    <div class="flavor-category" id="fall">
+      <div class="flavor-category-label">It's Fall Y'all &middot; Seasonal Flavors</div>
+      <div class="flavor-grid">
+
+        <div class="flavor-card">
+          <div class="flavor-img"><img src="/assets/fall-apple-pie.jpg" alt="Apple Pie cupcake" loading="lazy"></div>
+          <div class="flavor-info"><div class="flavor-name">Apple Pie</div><div class="flavor-desc">Fall's favorite pie, cupcake form</div></div>
+        </div>
+
+        <div class="flavor-card">
+          <div class="flavor-img"><img src="/assets/fall-maple-bacon.jpg" alt="Maple Bacon cupcake" loading="lazy"></div>
+          <div class="flavor-info"><div class="flavor-name">Maple Bacon</div><div class="flavor-desc">Sweet maple, candied bacon crunch</div></div>
+        </div>
+
+        <div class="flavor-card">
+          <div class="flavor-img"><img src="/assets/fall-pumpkin-spice.jpg" alt="Pumpkin Spice cupcake" loading="lazy"></div>
+          <div class="flavor-info"><div class="flavor-name">Pumpkin Spice</div><div class="flavor-desc">Cozy pumpkin, warm spice swirl</div></div>
+        </div>
+
+        <div class="flavor-card">
+          <div class="flavor-img"><img src="/assets/fall-smores.jpg" alt="S'mores cupcake" loading="lazy"></div>
+          <div class="flavor-info"><div class="flavor-name">S'mores</div><div class="flavor-desc">Chocolate, marshmallow, graham</div></div>
+        </div>
+
+      </div>
+      <p style="font-size: 14px; color: var(--warm-gray); margin-top: 20px; text-align: center;">Jen's limited fall lineup, baked in small batches while the season lasts. $15 for a 4-pack with one of each flavor. <a href="#contact" style="color: var(--pink-hover); font-weight: 500;">Message us</a> to grab one before they're gone.</p>
+    </div>
+
     <div class="pricing-note">
       <h3>Simple Pricing</h3>
       <div class="pricing-items">
@@ -371,8 +399,8 @@ html.has-announce .hero { padding-top: 200px; }
       <div class="order-col">
         <p class="section-label">Campus Drops</p>
         <h2 class="section-heading">Missing your student?</h2>
-        <p>We hand-deliver boxes of scratch-made cupcakes to college students on campus. September's Blacksburg drop is closed; the next one is Saturday, October 3. The list gets first dibs when pre-orders open.</p>
-        <a href="/campus/" class="order-cta-primary">See the Campus Drop →</a>
+        <p>We hand-deliver boxes of scratch-made cupcakes to college students near campus. Pre-orders are open now for Blacksburg (Saturday, October 3) and the University of Richmond area (Sunday, October 25).</p>
+        <a href="/campus/" class="order-cta-primary">See the Campus Drops →</a>
       </div>
       <div class="order-col">
         <p class="section-label">Custom Orders</p>
@@ -439,17 +467,6 @@ html.has-announce .hero { padding-top: 200px; }
       <div class="market-schedule">
         <p class="market-schedule-heading">Next Up</p>
         <div class="market-cards">
-          <a href="/campus/" class="market-card">
-            <div class="market-card-date">
-              <span class="market-card-day">FRI</span>
-              <span class="market-card-num">4</span>
-              <span class="market-card-month">SEP</span>
-            </div>
-            <div class="market-card-details">
-              <div class="market-card-name">Blacksburg Campus Drop</div>
-              <div class="market-card-time">Pre-orders closed &middot; delivering 3:00 &ndash; 5:00 PM</div>
-            </div>
-          </a>
           <div class="market-card">
             <div class="market-card-date">
               <span class="market-card-day">FRI</span>
@@ -461,7 +478,7 @@ html.has-announce .hero { padding-top: 200px; }
               <div class="market-card-time">4:00 &ndash; 8:00 PM</div>
             </div>
           </div>
-          <a href="https://forms.gle/JKewDQW8WTkSzxNh6" target="_blank" rel="noopener" class="market-card">
+          <a href="/campus/blacksburg/" class="market-card">
             <div class="market-card-date">
               <span class="market-card-day">SAT</span>
               <span class="market-card-num">3</span>
@@ -469,7 +486,18 @@ html.has-announce .hero { padding-top: 200px; }
             </div>
             <div class="market-card-details">
               <div class="market-card-name">Blacksburg Campus Drop</div>
-              <div class="market-card-time">Join the list for first dibs &rarr;</div>
+              <div class="market-card-time">Pre-orders open &middot; hand-off 3:00 &ndash; 4:00 PM</div>
+            </div>
+          </a>
+          <a href="/campus/richmond/" class="market-card">
+            <div class="market-card-date">
+              <span class="market-card-day">SUN</span>
+              <span class="market-card-num">25</span>
+              <span class="market-card-month">OCT</span>
+            </div>
+            <div class="market-card-details">
+              <div class="market-card-name">Richmond Campus Drop (UofR Area)</div>
+              <div class="market-card-time">Pre-orders open &middot; hand-off 3:00 &ndash; 4:00 PM</div>
             </div>
           </a>
         </div>
