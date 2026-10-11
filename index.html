@@ -215,7 +215,7 @@ html.has-announce .hero { padding-top: 200px; }
 }
 
 /* ═══ ORDER SECTION ═══ */
-.order-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 48px; align-items: start; }
+.order-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 48px 56px; align-items: start; }
 .order-col p { color: var(--warm-gray); margin-bottom: 28px; }
 .order-cta-primary,
 .order-cta-secondary { display: inline-block; background: var(--charcoal); color: var(--white); padding: 16px 40px; border-radius: 50px; font-family: var(--sans); font-size: 15px; font-weight: 600; letter-spacing: 0.04em; transition: all 0.3s; border: none; }
@@ -240,9 +240,14 @@ html.has-announce .hero { padding-top: 200px; }
   <script>
   (function(){
     var bar = document.getElementById('announce-bar');
-    if (new Date() >= new Date('2026-10-26T00:00:00-04:00')) {
+    var now = new Date();
+    if (now >= new Date('2026-11-09T00:00:00-05:00')) {
       bar.parentNode.removeChild(bar);
     } else {
+      if (now >= new Date('2026-10-24T00:00:00-04:00')) {
+        bar.href = '/workshops/';
+        bar.innerHTML = '\uD83E\uDDC1 <strong>Kids\' decorating workshop, Sun 11/8.</strong> <span class="announce-detail">Harpers Mill Clubhouse, ages 8 to 12, 10 spots. </span>Reserve a spot <span class="announce-arrow">&rarr;</span>';
+      }
       document.documentElement.classList.add('has-announce');
     }
   })();
@@ -398,6 +403,12 @@ html.has-announce .hero { padding-top: 200px; }
         <a href="/campus/" class="order-cta-primary">See the Campus Drops →</a>
       </div>
       <div class="order-col">
+        <p class="section-label">Workshops</p>
+        <h2 class="section-heading">Let them frost it</h2>
+        <p>A two-hour cupcake and cake pop decorating workshop for kids ages 8 to 12 at the Harpers Mill Clubhouse on Sunday, November 8. Cupcakes, cake pops, an apron to keep, and all the sprinkles. Ten spots.</p>
+        <a href="/workshops/" class="order-cta-primary">See the Workshop →</a>
+      </div>
+      <div class="order-col">
         <p class="section-label">Custom Orders</p>
         <h2 class="section-heading">Need something special?</h2>
         <p>Birthdays, office treats, special events: we'd love to make something just for you. Send us the details and we'll make it happen.</p>
@@ -495,6 +506,17 @@ html.has-announce .hero { padding-top: 200px; }
               <div class="market-card-time">4:00 - 8:00 PM &middot; 3800 Graythorne Dr &middot; pre-order pick-up 4:00 - 6:00 PM</div>
             </div>
           </div>
+          <a href="/workshops/" class="market-card">
+            <div class="market-card-date">
+              <span class="market-card-day">SUN</span>
+              <span class="market-card-num">8</span>
+              <span class="market-card-month">NOV</span>
+            </div>
+            <div class="market-card-details">
+              <div class="market-card-name">Kids' Decorating Workshop (Ages 8-12)</div>
+              <div class="market-card-time">Harpers Mill Clubhouse &middot; 11:00 AM - 1:00 PM &middot; 10 spots &middot; $60</div>
+            </div>
+          </a>
         </div>
         <p class="market-schedule-note">Pre-orders open the Sunday before each market date.</p>
         <p class="market-schedule-note">No upcoming dates at Chester Village Farmers Market or Harpers Mill right now. <a href="#contact" style="color: var(--pink-hover); font-weight: 500;">Reach out</a> for a custom order and delivery.</p>
