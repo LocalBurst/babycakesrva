@@ -235,18 +235,24 @@ html.has-announce .hero { padding-top: 200px; }
 <!-- NAV -->
 <nav class="nav" id="nav">
   <a class="announce-bar" id="announce-bar" href="/campus/">
-    🎓 <strong>Campus Drop pre-orders are open.</strong> <span class="announce-detail">Richmond area, Sun 10/25. </span>Order now <span class="announce-arrow">&rarr;</span>
+    🎓 <strong>Finals week Campus Drops are open.</strong> <span class="announce-detail">Blacksburg Sun 12/6, Richmond Wed 12/9. </span>Order now <span class="announce-arrow">&rarr;</span>
   </a>
   <script>
   (function(){
     var bar = document.getElementById('announce-bar');
     var now = new Date();
-    if (now >= new Date('2026-11-09T00:00:00-05:00')) {
+    if (now >= new Date('2026-12-07T15:00:00-05:00')) {
+      /* Richmond pre-orders closed: nothing left to announce. */
       bar.parentNode.removeChild(bar);
     } else {
-      if (now >= new Date('2026-10-24T00:00:00-04:00')) {
+      if (now < new Date('2026-11-09T00:00:00-05:00')) {
+        /* Workshop first while its seats are open; the December drops take over on 11/9. */
         bar.href = '/workshops/';
         bar.innerHTML = '\uD83E\uDDC1 <strong>Kids\' decorating workshop, Sun 11/8.</strong> <span class="announce-detail">Harpers Mill Clubhouse, ages 8 to 12, 10 spots. </span>Reserve a spot <span class="announce-arrow">&rarr;</span>';
+      } else if (now >= new Date('2026-12-04T15:00:00-05:00')) {
+        /* Blacksburg closed Fri 12/4 3 PM; Richmond still open until Mon 12/7 3 PM. */
+        bar.href = '/campus/richmond/';
+        bar.innerHTML = '\uD83C\uDF93 <strong>Finals week Campus Drop pre-orders are open.</strong> <span class="announce-detail">Richmond area, Wed 12/9. </span>Order now <span class="announce-arrow">&rarr;</span>';
       }
       document.documentElement.classList.add('has-announce');
     }
@@ -399,7 +405,7 @@ html.has-announce .hero { padding-top: 200px; }
       <div class="order-col">
         <p class="section-label">Campus Drops</p>
         <h2 class="section-heading">Missing your student?</h2>
-        <p>We hand-deliver boxes of scratch-made cupcakes to college students on campus. Pre-orders are open now for the University of Richmond area (Sunday, October 25).</p>
+        <p>We hand-deliver boxes of scratch-made cupcakes to college students on campus. Pre-orders are open now for our finals week drops: Blacksburg (Sunday, December 6) and the University of Richmond area (Wednesday, December 9).</p>
         <a href="/campus/" class="order-cta-primary">See the Campus Drops →</a>
       </div>
       <div class="order-col">
@@ -473,17 +479,6 @@ html.has-announce .hero { padding-top: 200px; }
       <div class="market-schedule">
         <p class="market-schedule-heading">Next Up</p>
         <div class="market-cards">
-          <a href="/campus/richmond/" class="market-card">
-            <div class="market-card-date">
-              <span class="market-card-day">SUN</span>
-              <span class="market-card-num">25</span>
-              <span class="market-card-month">OCT</span>
-            </div>
-            <div class="market-card-details">
-              <div class="market-card-name">Richmond Campus Drop (UofR Area)</div>
-              <div class="market-card-time">Pre-orders open &middot; hand-off 3:00 - 4:00 PM</div>
-            </div>
-          </a>
           <div class="market-card">
             <div class="market-card-date">
               <span class="market-card-day">FRI</span>
@@ -504,6 +499,28 @@ html.has-announce .hero { padding-top: 200px; }
             <div class="market-card-details">
               <div class="market-card-name">Kids' Decorating Workshop (Ages 8-12)</div>
               <div class="market-card-time">Harpers Mill Clubhouse &middot; 11:00 AM - 1:00 PM &middot; 10 spots &middot; $60</div>
+            </div>
+          </a>
+          <a href="/campus/blacksburg/" class="market-card">
+            <div class="market-card-date">
+              <span class="market-card-day">SUN</span>
+              <span class="market-card-num">6</span>
+              <span class="market-card-month">DEC</span>
+            </div>
+            <div class="market-card-details">
+              <div class="market-card-name">Blacksburg Campus Drop (Finals Week)</div>
+              <div class="market-card-time">Pre-orders open &middot; hand-off 2:00 - 3:00 PM</div>
+            </div>
+          </a>
+          <a href="/campus/richmond/" class="market-card">
+            <div class="market-card-date">
+              <span class="market-card-day">WED</span>
+              <span class="market-card-num">9</span>
+              <span class="market-card-month">DEC</span>
+            </div>
+            <div class="market-card-details">
+              <div class="market-card-name">Richmond Campus Drop (UofR Area, Finals Week)</div>
+              <div class="market-card-time">Pre-orders open &middot; hand-off 6:00 - 7:00 PM</div>
             </div>
           </a>
         </div>

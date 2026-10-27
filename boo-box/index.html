@@ -365,7 +365,7 @@ a { text-decoration: none; color: inherit; }
       </div>
       <div class="faq-item">
         <div class="faq-q">What if it sells out?</div>
-        <div class="faq-a">It's a small batch and there is no second delivery night. When they're gone, the button on this page switches to Sold Out. You can still <a href="/#contact">reach out</a> about a custom order.</div>
+        <div class="faq-a">It's a small batch and there is no second delivery night. Once orders close or the batch sells out, the buttons on this page switch off. You can still <a href="/#contact">reach out</a> about a custom order.</div>
       </div>
     </div>
   </div>
@@ -383,18 +383,18 @@ a { text-decoration: none; color: inherit; }
 </section>
 
 <script>
-/* ---- Boo Box status. Flip SOLD_OUT to true when the last box sells (Square shows Sold Out on its own; this flips the buttons here). ---- */
-var SOLD_OUT = false;
+/* ---- Boo Box status. ORDERS_CLOSED flips every CTA to a dead button once the order window shuts (closed Tue 10/27). ---- */
+var ORDERS_CLOSED = true;
 
 (function () {
-  if (SOLD_OUT) {
+  if (ORDERS_CLOSED) {
     document.querySelectorAll('.js-cta').forEach(function (a) {
-      a.textContent = 'Sold Out';
+      a.textContent = 'Orders Closed';
       a.removeAttribute('href');
       a.classList.add('is-soldout');
     });
-    document.querySelectorAll('.js-fineprint').forEach(function (p) { p.textContent = 'This batch of Boo Boxes is spoken for. Thank you, neighbors!'; });
-    document.querySelectorAll('.js-final-sub').forEach(function (p) { p.textContent = 'This batch is gone. Reach out on the main site about a custom order.'; });
+    document.querySelectorAll('.js-fineprint').forEach(function (p) { p.textContent = 'Orders for this batch are closed. Thank you, neighbors! Deliveries go out Wednesday 10/28, 7 to 8 PM.'; });
+    document.querySelectorAll('.js-final-sub').forEach(function (p) { p.textContent = 'This batch is spoken for. Reach out on the main site about a custom order.'; });
   }
 })();
 
